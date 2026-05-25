@@ -1,72 +1,45 @@
-📌 Overview
+Here's the web-only README:
 
-TechTask Hub is a full-stack web application designed to manage and track tasks efficiently. It enables users to create, update, and monitor tasks in a structured way, improving productivity and workflow management.
+TechTask Hub
+A full-stack project and task management platform with role-based access control, built with React, Node.js, Express, and SQLite.
+Features
 
-✨ Features
-📝 Create, update, and delete tasks
-📊 Track task status (Pending, In Progress, Completed)
-⚡ Fast and simple user interface
-📦 Persistent storage using SQLite
-🔄 RESTful API integration
-🛠️ Tech Stack
-Frontend: HTML, CSS, JavaScript
+Role-based access control across 4 user types: Admin, Project Manager, Systems Analyst, and Web Developer
+Each role gets a dedicated dashboard with role-specific permissions
+Project creation, assignment, and tracking
+Task management with status updates
+Secure authentication system
+SQLite database with no external DB dependency
+
+Tech Stack
+Frontend: React, Vite, Bootstrap
 Backend: Node.js, Express
 Database: SQLite
-📂 Project Structure
-TechTask Hub/
-│── BackEnd-Node/
-│   ├── server.js
-│   ├── database.sqlite
-│   └── routes/
-│
-│── FrontEnd/
-│   ├── public/
-│   │   └── index.html
-│   └── assets/
-│
-│── package.json
-🚀 Getting Started
-🔹 Clone the repository
-git clone https://github.com/your-username/TechTask-Hub.git
-cd TechTask-Hub
-🔹 Install dependencies
+Auth: Session-based authentication
+Getting Started
+Prerequisites
+
+Node.js v18+
+npm
+
+Installation
+bashgit clone https://github.com/nishal-1/techtask-hub
+cd techtask-hub
 npm install
-🔹 Run the backend
-npm run dev
-
-👉 Server runs at:
-
-http://localhost:5220
-🔹 Run the frontend
-Open FrontEnd/public/index.html
-Or use Live Server in VS Code
-🔗 API Endpoints
-Method	Endpoint	Description
-GET	/tasks	Get all tasks
-POST	/tasks	Create new task
-PUT	/tasks/:id	Update task
-DELETE	/tasks/:id	Delete task
-📸 Screenshots
-
-(Add your screenshots here)
-
-⚠️ Notes
-Backend must be running before frontend
-Do not upload node_modules/
-Ensure correct API URL in frontend
-🎯 Future Improvements
-🔐 Authentication (JWT)
-🔔 Notifications
-🎨 Better UI (React)
-📱 Mobile responsive design
-📄 License
-
-This project is licensed under the MIT License
-
-👨‍💻 Author
-
-Muhammed Nishal
-
-⭐ Support
-
-If you like this project, give it a ⭐ on GitHub!
+Running the App
+bashnpm run dev
+Frontend runs at http://localhost:3000
+Backend API runs at http://localhost:5220
+Demo Accounts
+RoleEmailPasswordAdministratoradmin@mandela.ac.zapasswordProject Managerpm@mandela.ac.zapasswordSystems Analysttask@mandela.ac.zapasswordWeb Developerdev@mandela.ac.zapassword
+Project Structure
+techtask-hub/
+├── src/              # React frontend components
+├── server.js         # Express backend + API routes
+├── database.sqlite   # SQLite database
+├── package.json      # Project config and scripts
+└── vite.config.js    # Vite configuration
+API Endpoints
+MethodEndpointDescriptionPOST/api/auth/loginUser loginGET/api/projectsGet all projectsPOST/api/projectsCreate projectGET/api/tasksGet all tasksPOST/api/tasksCreate taskGET/healthHealth check
+Author
+Nishal — github.com/nishal-1
